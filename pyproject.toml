@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sealos-django-postgresql-example"
+version = "1.0.0"
+description = "Controlled Django PostgreSQL example for Sealos practice"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "Django==6.0.7",
+  "gunicorn==26.0.0",
+  "psycopg[binary]==3.3.4",
+]
+
+[tool.django-stubs]
+django_settings_module = "config.settings"

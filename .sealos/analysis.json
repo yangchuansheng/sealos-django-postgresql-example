@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "framework": "Django",
+  "language": "python",
+  "packageManager": "pip",
+  "source": {
+    "repository": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+    "owner": "yangchuansheng",
+    "visibility": "public",
+    "defaultBranch": "main",
+    "executionCommit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+    "closurePath": "evidence/source-closure.v1.json",
+    "closureRecords": 90
+  },
+  "runtime": {
+    "python": "3.12.13",
+    "server": "gunicorn",
+    "application": "config.wsgi:application",
+    "workers": 1,
+    "port": 8000,
+    "healthPath": "/health/"
+  },
+  "database": {
+    "engine": "PostgreSQL",
+    "driver": "psycopg[binary]",
+    "migration": "python manage.py migrate"
+  },
+  "checks": {
+    "tests": "python manage.py test practice.tests.test_health practice.tests.test_items practice.tests.test_migrations --verbosity 2",
+    "deploy": "python manage.py check --deploy"
+  },
+  "image": {
+    "repository": "ghcr.io/yangchuansheng/sealos-django-postgresql-example",
+    "identity": "recorded in docs/tutorial-evidence/python-v1.3/artifacts.json"
+  }
+}

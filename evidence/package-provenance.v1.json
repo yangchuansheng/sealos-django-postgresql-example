@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "runId": "p24-python-practice-20260715",
+  "repository": {
+    "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+    "owner": "yangchuansheng",
+    "visibility": "public",
+    "defaultBranch": "main",
+    "pushPermission": true,
+    "sourcePinCommit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+    "sourcePinTree": "c40ea740f015a489a6093ad6d001136f6045316c"
+  },
+  "sourceTreeMode": "0700",
+  "python": {
+    "version": "3.12.13",
+    "executablePath": "venvs/django-source/bin/python",
+    "pathRedacted": true
+  },
+  "lock": {
+    "path": "requirements.lock",
+    "sha256": "9be793c0da23621d5b40ef822420fef33fe1dcf26b41125ead16795a1577e525",
+    "generatedBy": "uv pip compile --universal --generate-hashes",
+    "registry": "https://pypi.org/simple"
+  },
+  "packageArtifacts": [
+    {
+      "name": "asgiref",
+      "version": "3.12.1",
+      "registry": "https://pypi.org/pypi/asgiref/3.12.1/json",
+      "filename": "asgiref-3.12.1-py3-none-any.whl",
+      "sha256": "fe386d1c2bff7259ea95929266d12a8cf9a8b5a1c2598402967d8792e7a7c094"
+    },
+    {
+      "name": "Django",
+      "version": "6.0.7",
+      "registry": "https://pypi.org/pypi/django/6.0.7/json",
+      "filename": "django-6.0.7-py3-none-any.whl",
+      "sha256": "a037427c2288443a8c02a1b02295a31c239663aa682bc50b1976afb7cf6a769e"
+    },
+    {
+      "name": "gunicorn",
+      "version": "26.0.0",
+      "registry": "https://pypi.org/pypi/gunicorn/26.0.0/json",
+      "filename": "gunicorn-26.0.0-py3-none-any.whl",
+      "sha256": "40233d26a5f0d1872916188c276e21641155111c2853f0c2cd55260aec0d24fc"
+    },
+    {
+      "name": "packaging",
+      "version": "26.2",
+      "registry": "https://pypi.org/pypi/packaging/26.2/json",
+      "filename": "packaging-26.2-py3-none-any.whl",
+      "sha256": "5fc45236b9446107ff2415ce77c807cee2862cb6fac22b8a73826d0693b0980e"
+    },
+    {
+      "name": "psycopg",
+      "version": "3.3.4",
+      "registry": "https://pypi.org/pypi/psycopg/3.3.4/json",
+      "filename": "psycopg-3.3.4-py3-none-any.whl",
+      "sha256": "b6bbc25ccf05c8fad3b061d9db2ef0909a555171b84b07f29458a447253d679a"
+    },
+    {
+      "name": "psycopg-binary",
+      "version": "3.3.4",
+      "registry": "https://pypi.org/pypi/psycopg-binary/3.3.4/json",
+      "filename": "psycopg_binary-3.3.4-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "6402a9d8146cf4b3974ded3fd28a971e83dc6a0333eb7822524a3aa20b546578"
+    },
+    {
+      "name": "psycopg-binary",
+      "version": "3.3.4",
+      "registry": "https://pypi.org/pypi/psycopg-binary/3.3.4/json",
+      "filename": "psycopg_binary-3.3.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "sha256": "e7510c37550f91a187e3660a8cc50d4b760f8c3b8b2f89ebc5698cd2c7f2c85d"
+    },
+    {
+      "name": "sqlparse",
+      "version": "0.5.5",
+      "registry": "https://pypi.org/pypi/sqlparse/0.5.5/json",
+      "filename": "sqlparse-0.5.5-py3-none-any.whl",
+      "sha256": "12a08b3bf3eec877c519589833aed092e2444e68240a3577e8e26148acc7b1ba"
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "registry": "https://pypi.org/pypi/typing-extensions/4.16.0/json",
+      "filename": "typing_extensions-4.16.0-py3-none-any.whl",
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+    }
+  ],
+  "isolatedPythonTestGate": {
+    "installCommand": "python -m pip install --require-hashes -r requirements.lock",
+    "command": "python manage.py test practice.tests.test_health practice.tests.test_items practice.tests.test_migrations --verbosity 2",
+    "status": 0,
+    "result": "5 tests passed",
+    "stdoutStderrSha256": "9df772f5be0e664b458b0c114b540e7307abfb5bb0718c7affbe13232951de71",
+    "pythonVersion": "3.12.13",
+    "pythonPath": "venvs/django-source/bin/python",
+    "lockSha256": "9be793c0da23621d5b40ef822420fef33fe1dcf26b41125ead16795a1577e525",
+    "sourceCommit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+    "checkedOutHead": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+    "envKeys": [
+      "DJANGO_SECRET_KEY"
+    ],
+    "executedAtUtc": "2026-07-15T00:32:30.633Z"
+  },
+  "deployCheckGate": {
+    "command": "python manage.py check --deploy",
+    "status": 0,
+    "result": "System check identified no issues (0 silenced).",
+    "stdoutStderrSha256": "1e3e63f221bde88816c4a4ef7367691607b20cc1d194028a02ec9ae0586cf9b1",
+    "pythonVersion": "3.12.13",
+    "pythonPath": "venvs/django-source/bin/python",
+    "lockSha256": "9be793c0da23621d5b40ef822420fef33fe1dcf26b41125ead16795a1577e525",
+    "sourceCommit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+    "checkedOutHead": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+    "envKeys": [
+      "DJANGO_SECRET_KEY",
+      "DJANGO_DEBUG",
+      "DJANGO_ALLOWED_HOSTS",
+      "DJANGO_SECURE_SSL_REDIRECT",
+      "DJANGO_SESSION_COOKIE_SECURE",
+      "DJANGO_CSRF_COOKIE_SECURE",
+      "DJANGO_SECURE_HSTS_SECONDS",
+      "DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS",
+      "DJANGO_SECURE_HSTS_PRELOAD"
+    ],
+    "executedAtUtc": "2026-07-15T00:32:30.633Z"
+  },
+  "environment": {
+    "secretValues": "redacted",
+    "database": "in-memory SQLite selected by manage.py test; PostgreSQL settings retained for server path"
+  }
+}

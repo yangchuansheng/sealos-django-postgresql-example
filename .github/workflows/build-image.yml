@@ -1,0 +1,179 @@
+name: Build Django image
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_commit:
+        description: Full source commit SHA to test and build
+        required: true
+        type: string
+      image_tag:
+        description: Run-scoped immutable image tag
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  packages: write
+
+env:
+  IMAGE_REPOSITORY: ghcr.io/yangchuansheng/sealos-django-postgresql-example
+  TEST_COMMAND: python manage.py test practice.tests.test_health practice.tests.test_items practice.tests.test_migrations --verbosity 2
+  DEPLOY_CHECK_COMMAND: python manage.py check --deploy
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out requested source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ inputs.source_commit }}
+          fetch-depth: 0
+
+      - name: Assert dispatch and source identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF_NAME" = main
+          test "${{ inputs.source_commit }}" = "$(git rev-parse HEAD)"
+          [[ "${{ inputs.source_commit }}" =~ ^[0-9a-f]{40}$ ]]
+          [[ "${{ inputs.image_tag }}" =~ ^p24-python-practice-20260715-django-(baseline|update)$ ]]
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+
+      - name: Install hash-pinned dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m venv "$RUNNER_TEMP/django-venv"
+          "$RUNNER_TEMP/django-venv/bin/python" -m pip install --require-hashes -r requirements.lock
+
+      - name: Run exact Django test and deploy-check gates
+        shell: bash
+        run: |
+          set -uo pipefail
+          test_output="$RUNNER_TEMP/django-test-output.txt"
+          deploy_output="$RUNNER_TEMP/django-deploy-output.txt"
+          test_secret="$($RUNNER_TEMP/django-venv/bin/python -c 'import secrets; print(secrets.token_urlsafe(48))')"
+          DJANGO_SECRET_KEY="$test_secret" "$RUNNER_TEMP/django-venv/bin/python" manage.py test practice.tests.test_health practice.tests.test_items practice.tests.test_migrations --verbosity 2 2>&1 | tee "$test_output"
+          test_status=${PIPESTATUS[0]}
+          DJANGO_SECRET_KEY="$test_secret" DJANGO_DEBUG=False DJANGO_ALLOWED_HOSTS=phase24.invalid DJANGO_SECURE_SSL_REDIRECT=True DJANGO_SESSION_COOKIE_SECURE=True DJANGO_CSRF_COOKIE_SECURE=True DJANGO_SECURE_HSTS_SECONDS=31536000 DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS=True DJANGO_SECURE_HSTS_PRELOAD=True "$RUNNER_TEMP/django-venv/bin/python" manage.py check --deploy 2>&1 | tee "$deploy_output"
+          deploy_status=${PIPESTATUS[0]}
+          test_digest=$(sha256sum "$test_output" | awk '{print $1}')
+          deploy_digest=$(sha256sum "$deploy_output" | awk '{print $1}')
+          cat > "$RUNNER_TEMP/test-record.json" <<EOF
+          {
+            "framework": "Django",
+            "testGate": {
+              "installCommand": "python -m pip install --require-hashes -r requirements.lock",
+              "command": "${TEST_COMMAND}",
+              "status": ${test_status},
+              "stdoutStderrSha256": "${test_digest}",
+              "pythonVersion": "$("$RUNNER_TEMP/django-venv/bin/python" --version 2>&1)",
+              "lockSha256": "$(sha256sum requirements.lock | awk '{print $1}')",
+              "requestedSourceCommit": "${{ inputs.source_commit }}",
+              "checkedOutHead": "$(git rev-parse HEAD)",
+              "testSourceSha": "$(git rev-parse HEAD)",
+              "builtSourceSha": "$(git rev-parse HEAD)"
+            },
+            "deployCheckGate": {
+              "command": "${DEPLOY_CHECK_COMMAND}",
+              "status": ${deploy_status},
+              "stdoutStderrSha256": "${deploy_digest}",
+              "envKeys": ["DJANGO_SECRET_KEY", "DJANGO_DEBUG", "DJANGO_ALLOWED_HOSTS", "DJANGO_SECURE_SSL_REDIRECT", "DJANGO_SESSION_COOKIE_SECURE", "DJANGO_CSRF_COOKIE_SECURE", "DJANGO_SECURE_HSTS_SECONDS", "DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS", "DJANGO_SECURE_HSTS_PRELOAD"]
+            }
+          }
+          EOF
+          if [ "$test_status" -ne 0 ] || [ "$deploy_status" -ne 0 ]; then exit 1; fi
+
+      - name: Upload passing test identity
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: django-test-${{ inputs.image_tag }}
+          path: ${{ runner.temp }}/test-record.json
+          if-no-files-found: error
+
+  build:
+    needs: test
+    if: needs.test.result == 'success'
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out requested source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ inputs.source_commit }}
+          fetch-depth: 0
+
+      - name: Assert dispatch and source identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF_NAME" = main
+          test "${{ inputs.source_commit }}" = "$(git rev-parse HEAD)"
+          [[ "${{ inputs.image_tag }}" =~ ^p24-python-practice-20260715-django-(baseline|update)$ ]]
+
+      - name: Download passing test identity
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: django-test-${{ inputs.image_tag }}
+          path: ${{ runner.temp }}/test-record
+
+      - name: Assert both passing gates and source identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          jq -e \
+            --arg commit "${{ inputs.source_commit }}" \
+            '.testGate.status == 0 and .deployCheckGate.status == 0 and .testGate.requestedSourceCommit == $commit and .testGate.checkedOutHead == $commit and .testGate.testSourceSha == $commit and .testGate.builtSourceSha == $commit and (.testGate.stdoutStderrSha256 | test("^[0-9a-f]{64}$")) and (.deployCheckGate.stdoutStderrSha256 | test("^[0-9a-f]{64}$"))' \
+            "$RUNNER_TEMP/test-record/test-record.json"
+
+      - name: Log in to GHCR
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@b5ca514318bd6ebac0fb2aedd5d36ec1b5c232a2
+
+      - name: Build and publish requested immutable tag
+        id: build
+        uses: docker/build-push-action@263435318d21b8e681c14492fe198d362a7d2c83
+        with:
+          context: .
+          push: true
+          tags: ${{ env.IMAGE_REPOSITORY }}:${{ inputs.image_tag }}
+          labels: |
+            org.opencontainers.image.source=https://github.com/yangchuansheng/sealos-django-postgresql-example
+            org.opencontainers.image.revision=${{ inputs.source_commit }}
+            org.opencontainers.image.version=${{ inputs.image_tag }}
+          provenance: mode=max
+          sbom: true
+
+      - name: Record published image identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "${{ inputs.source_commit }}" = "$(git rev-parse HEAD)"
+          jq -n \
+            --arg digest "${{ steps.build.outputs.digest }}" \
+            --arg tag "${{ inputs.image_tag }}" \
+            --arg source "${{ inputs.source_commit }}" \
+            --arg run "$GITHUB_RUN_ID" \
+            '{imageRepository: env.IMAGE_REPOSITORY, imageTag: $tag, imageDigest: $digest, sourceCommit: $source, checkedOutHead: $source, builtSourceSha: $source, workflowRunId: $run}' \
+            > "$RUNNER_TEMP/image-record.json"
+
+      - name: Upload release identity
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: django-release-${{ inputs.image_tag }}
+          path: |
+            ${{ runner.temp }}/test-record/test-record.json
+            ${{ runner.temp }}/image-record.json
+          if-no-files-found: error

@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "status": "source-prepared",
+  "source": {
+    "repository": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+    "branch": "main",
+    "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9"
+  },
+  "runtime": {
+    "framework": "Django",
+    "python": "3.12.13",
+    "server": "gunicorn",
+    "application": "config.wsgi:application",
+    "workers": 1,
+    "port": 8000,
+    "healthPath": "/health/"
+  },
+  "release": {
+    "repository": "ghcr.io/yangchuansheng/sealos-django-postgresql-example",
+    "baselineTag": "p24-python-practice-20260715-django-baseline",
+    "updateTag": "p24-python-practice-20260715-django-update",
+    "digests": "recorded after anonymous manifest verification"
+  }
+}

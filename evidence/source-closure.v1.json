@@ -1,0 +1,2450 @@
+{
+  "schemaVersion": 1,
+  "runId": "p24-python-practice-20260715",
+  "framework": "Django",
+  "repository": {
+    "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+    "owner": "yangchuansheng",
+    "visibility": "public",
+    "defaultBranch": "main",
+    "executionCommit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+    "executionTree": "c40ea740f015a489a6093ad6d001136f6045316c"
+  },
+  "sourceContract": {
+    "count": 90,
+    "recordSetSha256": "13ebf9e958822c3bc748d3903ea492c3be0b4bd97bc5c41db3dc3b603ed078ef",
+    "authority": "Pinned Git commit/blob evidence with runtime values recorded downstream."
+  },
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.resource.health-path",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<health-path>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "practice/views.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "practice/views.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3114d0adad076bb1d098babdb726ae5a528ff35a",
+      "sourceBlobSha256": "5a28c8e5f0d437f7b08bc2c68c5f7b41483d206cdbdcfa30043e1924c927cc68",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 1
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.command.deploy",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "command",
+      "placeholderText": "<sealos-deploy-command>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 2
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.command.wsgi-server",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "command",
+      "placeholderText": "python -m gunicorn <wsgi-module>:application --bind 0.0.0.0:<port> --workers 1 --access-logfile - --error-logfile -",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/wsgi.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/wsgi.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "a554333e9ef86ab9177b62e242376addbe6c6bd8",
+      "sourceBlobSha256": "94314d4950e6ad51b0d35455f5a0e3866a1a77a608bb50873359bf1998807318",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 3
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.command.wsgi-module",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "command",
+      "placeholderText": "<wsgi-module>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/wsgi.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/wsgi.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "a554333e9ef86ab9177b62e242376addbe6c6bd8",
+      "sourceBlobSha256": "94314d4950e6ad51b0d35455f5a0e3866a1a77a608bb50873359bf1998807318",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 4
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.resource.port",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<port>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "practice/urls.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "practice/urls.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "71880c64519cf41e94d654fc5ddf71af8783f003",
+      "sourceBlobSha256": "586dd457f2e8062930778b8fd949a47522328d03713d99826340010db323b1bf",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 5
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.command.asgi-server",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "command",
+      "placeholderText": "<conditional-asgi-command>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 6
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.environment.settings-module",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "environment-key",
+      "placeholderText": "<django-settings-module>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "literal",
+        "selector": "manage.py",
+        "match": "source-owned contract"
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 7
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.environment.application-keys",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "environment-key",
+      "placeholderText": "<application-environment-keys>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "literal",
+        "selector": "manage.py",
+        "match": "source-owned contract"
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 8
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.environment.secret-key",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "environment-key",
+      "placeholderText": "<secret-key-environment-key>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "literal",
+        "selector": "config/settings.py",
+        "match": "source-owned contract"
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 9
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.resource.allowed-hosts",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<allowed-hosts-values>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/settings.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 10
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.resource.csrf-origins",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<csrf-trusted-origins>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 11
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.resource.proxy-contract",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<ingress-proxy-header-contract>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/settings.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 12
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.command.collectstatic",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "command",
+      "placeholderText": "python manage.py collectstatic --noinput",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/settings.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 13
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.resource.static-root",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<static-root-path>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/settings.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 14
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.resource.static-owner",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<static-serving-owner>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/settings.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 15
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.resource.app",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<sealos-app-name>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 16
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.resource.namespace",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<sealos-namespace>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 17
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.resource.image",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<container-image>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 18
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.resource.public-url",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<public-app-url>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "practice/urls.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "practice/urls.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "71880c64519cf41e94d654fc5ddf71af8783f003",
+      "sourceBlobSha256": "586dd457f2e8062930778b8fd949a47522328d03713d99826340010db323b1bf",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 19
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.resource.footprint",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<recorded-resource-identities>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 20
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#deploy-django-sealos.resource.runtime-state",
+      "articleSlug": "deploy-django-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<runtime-truth-state>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 21
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.resource.psycopg-package",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<psycopg-package-spec>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 22
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.resource.database-interface",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<database-settings-interface>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/settings.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 23
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.environment.database-keys",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "environment-key",
+      "placeholderText": "<database-environment-keys>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "literal",
+        "selector": "config/settings.py",
+        "match": "source-owned contract"
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 24
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.environment.settings-module",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "environment-key",
+      "placeholderText": "<production-settings-module>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "literal",
+        "selector": "manage.py",
+        "match": "source-owned contract"
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 25
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.command.deploy",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "command",
+      "placeholderText": "<django-postgresql-deploy-command>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/settings.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 26
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.resource.app",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<django-app-resource-name>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 27
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.resource.database",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<postgresql-resource-name>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/settings.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 28
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.resource.migration-job",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<migration-job-name>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "practice/migrations/0001_initial.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "practice/migrations/0001_initial.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "9e99f98496dd32ff764c9bed15edcfd09d3c21bf",
+      "sourceBlobSha256": "544cc457e90b8e0b74b94d899b6181c5bb09ecedc1fbfa63618aa1c827356688",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 29
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.migration.files",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "migration-detail",
+      "placeholderText": "<committed-migration-files>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "practice/migrations/0001_initial.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "literal",
+        "selector": "practice/migrations/0001_initial.py",
+        "match": "source-owned contract"
+      },
+      "sourceBlobSha1": "9e99f98496dd32ff764c9bed15edcfd09d3c21bf",
+      "sourceBlobSha256": "544cc457e90b8e0b74b94d899b6181c5bb09ecedc1fbfa63618aa1c827356688",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 30
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.migration.drift-check",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "migration-detail",
+      "placeholderText": "python manage.py makemigrations --check --dry-run",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "practice/migrations/0001_initial.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "literal",
+        "selector": "practice/migrations/0001_initial.py",
+        "match": "source-owned contract"
+      },
+      "sourceBlobSha1": "9e99f98496dd32ff764c9bed15edcfd09d3c21bf",
+      "sourceBlobSha256": "544cc457e90b8e0b74b94d899b6181c5bb09ecedc1fbfa63618aa1c827356688",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 31
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.migration.release-operation",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "migration-detail",
+      "placeholderText": "<migration-release-operation>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "practice/migrations/0001_initial.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "literal",
+        "selector": "practice/migrations/0001_initial.py",
+        "match": "source-owned contract"
+      },
+      "sourceBlobSha1": "9e99f98496dd32ff764c9bed15edcfd09d3c21bf",
+      "sourceBlobSha256": "544cc457e90b8e0b74b94d899b6181c5bb09ecedc1fbfa63618aa1c827356688",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 32
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.migration.command",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "migration-detail",
+      "placeholderText": "python manage.py migrate --noinput",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "practice/migrations/0001_initial.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "literal",
+        "selector": "practice/migrations/0001_initial.py",
+        "match": "source-owned contract"
+      },
+      "sourceBlobSha1": "9e99f98496dd32ff764c9bed15edcfd09d3c21bf",
+      "sourceBlobSha256": "544cc457e90b8e0b74b94d899b6181c5bb09ecedc1fbfa63618aa1c827356688",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 33
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.migration.state",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "migration-detail",
+      "placeholderText": "<accepted-migration-state>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "practice/migrations/0001_initial.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "literal",
+        "selector": "practice/migrations/0001_initial.py",
+        "match": "source-owned contract"
+      },
+      "sourceBlobSha1": "9e99f98496dd32ff764c9bed15edcfd09d3c21bf",
+      "sourceBlobSha256": "544cc457e90b8e0b74b94d899b6181c5bb09ecedc1fbfa63618aa1c827356688",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 34
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.resource.create-path",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<application-create-path>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 35
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.resource.read-path",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<application-read-path>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 36
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.resource.synthetic-record",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<synthetic-record-identity>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 37
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.resource.public-url",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<public-application-url>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "practice/urls.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "practice/urls.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "71880c64519cf41e94d654fc5ddf71af8783f003",
+      "sourceBlobSha256": "586dd457f2e8062930778b8fd949a47522328d03713d99826340010db323b1bf",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 38
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.resource.footprint",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<recorded-database-resource-identities>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/settings.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 39
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.resource.logs",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<database-log-identities>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/settings.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 40
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.resource.connection-max-age",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<connection-max-age>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 41
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.resource.connection-health-check",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<connection-health-check-setting>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "practice/views.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "practice/views.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3114d0adad076bb1d098babdb726ae5a528ff35a",
+      "sourceBlobSha256": "5a28c8e5f0d437f7b08bc2c68c5f7b41483d206cdbdcfa30043e1924c927cc68",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 42
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-postgresql-sealos.resource.connection-budget",
+      "articleSlug": "django-postgresql-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<per-pod-connection-budget>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 43
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.command.deploy",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "command",
+      "placeholderText": "<production-deploy-command>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 44
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.command.process",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "command",
+      "placeholderText": "<production-process-command>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 45
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.namespace",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<production-namespace>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 46
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.app",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<production-app-name>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 47
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.database",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<production-database-name>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/settings.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 48
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.command.deployment-check",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "command",
+      "placeholderText": "python manage.py check --deploy --fail-level WARNING",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 49
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.environment.settings-module",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "environment-key",
+      "placeholderText": "<production-settings-module>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "literal",
+        "selector": "manage.py",
+        "match": "source-owned contract"
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 50
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.environment.application-keys",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "environment-key",
+      "placeholderText": "<production-environment-keys>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "literal",
+        "selector": "manage.py",
+        "match": "source-owned contract"
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 51
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.static-root",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<static-root-path>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/settings.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 52
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.command.collectstatic",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "command",
+      "placeholderText": "python manage.py collectstatic --noinput",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/settings.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 53
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.static-owner",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<static-serving-owner>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/settings.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 54
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.media-location",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<media-storage-location>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/settings.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 55
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.media-owner",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<media-serving-owner>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/settings.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 56
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.migration.files",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "migration-detail",
+      "placeholderText": "<production-migration-files>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "practice/migrations/0001_initial.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "literal",
+        "selector": "practice/migrations/0001_initial.py",
+        "match": "source-owned contract"
+      },
+      "sourceBlobSha1": "9e99f98496dd32ff764c9bed15edcfd09d3c21bf",
+      "sourceBlobSha256": "544cc457e90b8e0b74b94d899b6181c5bb09ecedc1fbfa63618aa1c827356688",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 57
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.migration.command",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "migration-detail",
+      "placeholderText": "python manage.py migrate --noinput",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "practice/migrations/0001_initial.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "literal",
+        "selector": "practice/migrations/0001_initial.py",
+        "match": "source-owned contract"
+      },
+      "sourceBlobSha1": "9e99f98496dd32ff764c9bed15edcfd09d3c21bf",
+      "sourceBlobSha256": "544cc457e90b8e0b74b94d899b6181c5bb09ecedc1fbfa63618aa1c827356688",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 58
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.migration.release-operation",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "migration-detail",
+      "placeholderText": "<production-migration-release-operation>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "practice/migrations/0001_initial.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "literal",
+        "selector": "practice/migrations/0001_initial.py",
+        "match": "source-owned contract"
+      },
+      "sourceBlobSha1": "9e99f98496dd32ff764c9bed15edcfd09d3c21bf",
+      "sourceBlobSha256": "544cc457e90b8e0b74b94d899b6181c5bb09ecedc1fbfa63618aa1c827356688",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 59
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.migration-job",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<migration-job-name>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "practice/migrations/0001_initial.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "practice/migrations/0001_initial.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "9e99f98496dd32ff764c9bed15edcfd09d3c21bf",
+      "sourceBlobSha256": "544cc457e90b8e0b74b94d899b6181c5bb09ecedc1fbfa63618aa1c827356688",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 60
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.migration.state",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "migration-detail",
+      "placeholderText": "<accepted-migration-state>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "practice/migrations/0001_initial.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "literal",
+        "selector": "practice/migrations/0001_initial.py",
+        "match": "source-owned contract"
+      },
+      "sourceBlobSha1": "9e99f98496dd32ff764c9bed15edcfd09d3c21bf",
+      "sourceBlobSha256": "544cc457e90b8e0b74b94d899b6181c5bb09ecedc1fbfa63618aa1c827356688",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 61
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.replicas",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<replica-count>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 62
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.cpu-request",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<cpu-request>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 63
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.cpu-limit",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<cpu-limit>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 64
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.memory-request",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<memory-request>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 65
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.memory-limit",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<memory-limit>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 66
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.startup-path",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<startup-probe-path>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 67
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.readiness-path",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<readiness-probe-path>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 68
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.liveness-path",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<liveness-probe-path>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 69
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.probe-timings",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<probe-timing-values>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 70
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.gunicorn-timeout",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<gunicorn-graceful-timeout>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 71
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.pod-grace",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<pod-termination-grace-period>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 72
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.command.update",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "command",
+      "placeholderText": "<production-update-command>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 73
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.current-image",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<current-image>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 74
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.public-url",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<production-public-url>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "practice/urls.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "practice/urls.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "71880c64519cf41e94d654fc5ddf71af8783f003",
+      "sourceBlobSha256": "586dd457f2e8062930778b8fd949a47522328d03713d99826340010db323b1bf",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 75
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.runtime-footprint",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<runtime-resource-identities>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 76
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.command.rollback",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "command",
+      "placeholderText": "<production-rollback-command>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 77
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.previous-image",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<previous-image>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 78
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.database-backup-owner",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<database-backup-owner>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/settings.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 79
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.media-backup-owner",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<media-backup-owner>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "config/settings.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "config/settings.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "b4a1dbd698c4919ed274324605cf8ff6a4250f3e",
+      "sourceBlobSha256": "a07044a5244c4c0a2d58dd0be6d401c31d7b8928b2ce1c07d03cdf48934dd1b2",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 80
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.backup-product",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<backup-product>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 81
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.backup-schedule",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<backup-schedule>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 82
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.backup-retention",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<backup-retention>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 83
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.backup-rpo",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<backup-rpo>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 84
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.backup-rto",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<backup-rto>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 85
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.restore-procedure",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<restore-procedure>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 86
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.restore-test",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<last-restore-test>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 87
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.cleanup-identities",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<manifest-recorded-cleanup-identities>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 88
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.resource.finalizers",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "resource-identifier",
+      "placeholderText": "<recorded-finalizer-identities>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 89
+    },
+    {
+      "schemaVersion": 1,
+      "id": "docs/tutorial-evidence/python-v1.3.json#django-production-deployment-sealos.command.cleanup",
+      "articleSlug": "django-production-deployment-sealos",
+      "framework": "Django",
+      "fieldKind": "command",
+      "placeholderText": "<production-cleanup-command>",
+      "source": {
+        "url": "https://github.com/yangchuansheng/sealos-django-postgresql-example",
+        "commit": "528dfe3851b1b199b027b8cbb95497ec0e7065d9",
+        "path": "manage.py",
+        "replacement": null
+      },
+      "sourceMatch": {
+        "kind": "derived",
+        "selector": "manage.py",
+        "rule": "Derive the deployment value from the pinned Django source contract and record the runtime comparison in the Phase 24 evidence ledger."
+      },
+      "sourceBlobSha1": "3ab6efc80bdc01b97c89c2df6d8c75a953b83ec9",
+      "sourceBlobSha256": "718c6595e6a158e4a40b8e4725735d7411ff70b471b793f32f065ab93be095c8",
+      "runtimeEvidence": {
+        "runId": "p24-python-practice-20260715",
+        "status": "pending-runtime-proof"
+      },
+      "status": "source-verified",
+      "sequence": 90
+    }
+  ]
+}
