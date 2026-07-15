@@ -5,10 +5,16 @@ from django.views.decorators.http import require_GET, require_http_methods
 
 from practice.models import Item
 
+RELEASE_MARKER = 'django-update'
+
 
 @require_GET
 def health(request):
-    return JsonResponse({'status': 'ok', 'service': 'django', 'framework': 'Django'})
+    response = JsonResponse(
+        {'status': 'ok', 'service': 'django', 'framework': 'Django'},
+    )
+    response['X-Release-Marker'] = RELEASE_MARKER
+    return response
 
 
 @require_http_methods(['POST'])
